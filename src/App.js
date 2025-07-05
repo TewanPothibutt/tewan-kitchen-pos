@@ -1,5 +1,6 @@
 import React from 'react';
-import TewanKitchenPOS from './TewanKitchenPOS';
+import TewanKitchenPOS from './TewanKitchenPOS_responsive';
+
 
 function App() {
   return <TewanKitchenPOS />;
