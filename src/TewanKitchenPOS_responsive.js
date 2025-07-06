@@ -135,6 +135,19 @@ const TewanKitchenPOS = () => {
     
     // Here you would normally send to Google Sheets
     console.log('Transaction data for Google Sheets:', transaction);
+    fetch('https://script.google.com/macros/s/AKfycbx0hjXgcOpuvaVpnsiQ8yrfDAVAfsAMulmcvoozbx3z9dXhfaG7JQORSdt9vMo_FOZc/exec', {
+      method: 'POST',
+      body: JSON.stringify(transaction),
+      headers: {
+      'Content-Type': 'application/json',
+      },
+  })
+  .then(res => console.log("✅ Google Sheet saved"))
+  .catch(err => console.error("❌ Failed to save:", err));
+
+
+
+
   };
 
   // Get daily statistics
